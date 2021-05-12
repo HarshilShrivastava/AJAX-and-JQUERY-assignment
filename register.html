@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="register.css">
+  <script type = "text/javascript" 
+  src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+
+<script type = "text/javascript" 
+  src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+</script>
+    
+  <title>Sign In</title>
+</head>
+
+<body>
+  
+  <div class="container">
+    
+    <div class="navbar">
+      <img src="images/img1.png" class="logo">
+      <nav>
+        <ul id="menuList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+        </ul>
+      </nav>
+      <img src="images/menu-icon.png" class="menu-icon" onclick="togglemenu()">
+    </div>
+    <h1 style="text-align: center;">SIGN IN</h1>
+    <div class="Fields">
+      <div>
+        <div class="formContainer">
+          <form method="POST" id="form">
+            <div class="Fields">
+              <div>
+              <div id="message"></div>
+                <label >Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required/>
+                <label >Password</label>
+                <input type="text" id="password" placeholder="Enter Password" required/>
+                <button>
+                  <input type="submit" id="submitbutton" value="Register" >
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    
+    <script>
+
+/FORM VALIDATION/ 
+
+    var form = document.getElementById("form")
+    var error = [] 
+    var success = ""
+ 
+    form.addEventListener('submit',function(e){                         /EVENT HANDLING/
+      e.preventDefault()
+
+      var username = document.getElementById('username')
+      var password = document.getElementById('password')
+
+      if(username.value == ""){
+        error.push("Please enter the username")
+      }
+      
+      if(password.value == ""){
+        error.push("Please enter the password")
+      }
+      
+      alert("Form is Submitted")
+
+      var message = document.getElementById('message')
+      message.innerText=error
+    })
+
+
+
+    $(document).ready(function() {                                          /ANIMATION WITH JQUERY/
+
+$("#submitbutton").click(function(){
+   $(".logo").effect( "bounce", {times:3}, 300 );
+});
+
+});
+
+
+    var menuList = document.getElementById("menuList");
+
+    menuList.style.maxHeight = "0px";
+
+    function togglemenu() {
+      if (menuList.style.maxHeight == "0px") {
+        menuList.style.maxHeight = "130px";
+      }
+      else {
+        menuList.style.maxHeight = "0px";
+      }
+    }
+    </script>
+
+    
+</body>
+
+</html>

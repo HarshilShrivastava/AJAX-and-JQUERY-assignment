@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Web Technologies</title>
+</head>
+<body>
+    <div class="container">
+      <div class="navbar">
+        <img src="images/img1.png" class="logo">
+        <nav>
+          <ul id="menuList">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </nav>
+        <img src="images/img2.png" class="menu-icon" onclick="togglemenu()">
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <h2>Manchester<br>United</h2>
+          <h3>Home Kit</h3>
+          <p>*Training Kit also available</p>
+          <h4>$40</h4>
+          <button type="button">Buy Now</button>
+        </div>
+        <div class="col-2">
+          <img src="images/jersey1.jpg" class="jersey">
+          <div class="color-box"></div>
+          
+        </div>
+      </div>
+
+      <div class="social-links">
+        <img src="images/fb.png">
+        <img src="images/tw.png">
+        <img src="images/ig.png">
+      </div>
+
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+    <script>
+      var menuList = document.getElementById("menuList");
+
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu(){
+        if(menuList.style.maxHeight == "0px"){
+          menuList.style.maxHeight = "130px";
+        }
+        else{
+          menuList.style.maxHeight = "0px";
+        }
+      }
+
+      
+    </script>
+</body>
+</html>
